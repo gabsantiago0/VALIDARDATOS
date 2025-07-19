@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validar DNI, NIE, CIF, IBAN, Teléfono y Email - ValidarDatos.com</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Comprueba y valida DNI, NIE, CIF, IBAN, teléfono y email españoles de forma gratuita y segura. Herramienta online para validar documentos oficiales españoles.">
+    <meta name="keywords" content="validar DNI, validar NIE, validar CIF, validar IBAN, validar teléfono, validar email, España, documento oficial, validación">
+    <meta name="author" content="ValidarDatos.com">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://validardatos.com/">
+    <meta property="og:title" content="Validar DNI, NIE, CIF, IBAN, Teléfono y Email - ValidarDatos.com">
+    <meta property="og:description" content="Herramienta gratuita para validar documentos españoles de forma segura y rápida.">
+    <meta property="og:image" content="https://validardatos.com/og-image.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://validardatos.com/">
+    <meta property="twitter:title" content="Validar DNI, NIE, CIF, IBAN, Teléfono y Email">
+    <meta property="twitter:description" content="Herramienta gratuita para validar documentos españoles.">
+    <meta property="twitter:image" content="https://validardatos.com/og-image.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="left-section">
+            <div class="tablet-mockup">
+                <div class="tablet-frame">
+                    <div class="tablet-screen">
+                        <div class="flags-container">
+                            <div class="eu-flag">
+                                <div class="eu-stars">
+                                    <div class="star"></div>
+                                    <div class="star"></div>
+                                    <div class="star"></div>
+                                    <div class="star"></div>
+                                    <div class="star"></div>
+                                    <div class="star"></div>
+                                    <div class="star"></div>
+                                    <div class="star"></div>
+                                    <div class="star"></div>
+                                    <div class="star"></div>
+                                    <div class="star"></div>
+                                    <div class="star"></div>
+                                </div>
+                            </div>
+                            <div class="spain-flag">
+                                <div class="spain-red"></div>
+                                <div class="spain-yellow"></div>
+                                <div class="spain-red"></div>
+                            </div>
+                        </div>
+                        <div class="check-circle">
+                            <div class="checkmark">✓</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="site-name">validardatos.com</div>
+        </div>
+
+        <div class="right-section">
+            <h1>Comprobar y validar DNI, NIE o CIF españoles, IBAN, Teléfono y Email</h1>
+
+            <!-- Anuncio superior (OCULTO TEMPORALMENTE) -->
+            <!-- <div class="ad-container ad-top">
+                <div class="ad-placeholder">
+                    <span>📢 Anuncio</span>
+                    <small>Google AdSense</small>
+                </div>
+            </div> -->
+
+            <div class="validation-type-selector">
+                <select id="validationType">
+                    <option value="nif">NIF/NIE/CIF</option>
+                    <option value="iban">IBAN</option>
+                    <option value="phone">Teléfono español</option>
+                    <option value="email">Email</option>
+                </select>
+            </div>
+
+            <div class="validation-form">
+                <input type="text" id="idInput" placeholder="DNI, NIE, CIF" maxlength="10">
+                <button id="validateBtn">✓ Validar</button>
+            </div>
+
+            <div id="result" class="result-container" style="display: none;"></div>
+
+            <!-- Anuncio lateral derecho (OCULTO TEMPORALMENTE) -->
+            <!-- <div class="ad-container ad-sidebar">
+                <div class="ad-placeholder">
+                    <span>📢 Anuncio</span>
+                    <small>Google AdSense</small>
+                </div>
+            </div> -->
+
+            <!-- Anuncio inferior (OCULTO TEMPORALMENTE) -->
+            <!-- <div class="ad-container ad-bottom">
+                <div class="ad-placeholder">
+                    <span>📢 Anuncio</span>
+                    <small>Google AdSense</small>
+                </div>
+            </div> -->
+
+            <div class="footer">
+                <a href="#" id="privacyLink">Política de privacidad</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Privacy Policy Modal -->
+    <div id="privacyModal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Política de privacidad</h2>
+            <p>Esta aplicación valida números de identificación españoles (DNI, NIE, CIF) de forma local en su
+                navegador. No se almacenan ni transmiten datos personales a servidores externos.</p>
+            <p>Los datos introducidos se procesan únicamente para realizar la validación y no se conservan después de
+                cerrar la aplicación.</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
