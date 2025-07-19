@@ -330,7 +330,17 @@ document.addEventListener('DOMContentLoaded', function() {
     updateInputPlaceholder();
     
     // Validation type change
-    validationType.addEventListener('change', updateInputPlaceholder);
+    validationType.addEventListener('change', function() {
+        updateInputPlaceholder();
+        
+        // Track validation type change in Google Analytics
+        if (typeof gtag !== 'undefined') {
+            gtag('event', 'validation_type_change', {
+                'event_category': 'navigation',
+                'event_label': this.value
+            });
+        }
+    });
     
     // Validate button click
     validateBtn.addEventListener('click', function() {
@@ -367,6 +377,15 @@ document.addEventListener('DOMContentLoaded', function() {
             }
             
             showResult(result, selectedType);
+            
+            // Track validation event in Google Analytics
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'validation', {
+                    'event_category': 'form',
+                    'event_label': selectedType,
+                    'value': result.isValid ? 1 : 0
+                });
+            }
         } catch (error) {
             showError(error.message);
             hideResult();
